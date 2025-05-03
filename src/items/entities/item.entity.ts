@@ -1,4 +1,4 @@
-import { Restaurant } from '../restaurants/restaurant.entity';
+import { Restaurant } from '../../restaurants/entities/restaurant.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,

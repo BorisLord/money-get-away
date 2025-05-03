@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { RestaurantsModule } from './restaurants/restaurant.module';
-import { UsersModule } from './users/user.module';
-import { ItemsModule } from './items/item.module';
+import { RestaurantsModule } from './restaurants/restaurants.module';
+import { UsersModule } from './users/users.module';
+import { ItemsModule } from './items/items.module';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
+import { RestaurantsService } from './restaurants/restaurants.service';
 
 @Module({
   imports: [
@@ -16,6 +17,6 @@ import { DatabaseModule } from './database/database.module';
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, RestaurantsService],
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
-import { Item } from '../items/item.entity';
-import { User } from '../users/user.entity';
+import { Item } from '../../items/entities/item.entity';
+import { User } from '../../users/entities/user.entity';
 
 import {
   Entity,
