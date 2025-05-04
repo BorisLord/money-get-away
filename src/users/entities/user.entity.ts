@@ -19,7 +19,7 @@ export class User {
   username: string;
 
   @Column()
-  password: string; // hashME
+  password: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
